@@ -4,24 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.torugo.lista.R
 import com.torugo.lista.data.db.AppDatabase
 import com.torugo.lista.data.repository.ItemDbDataSource
 import com.torugo.lista.data.repository.ItemRepository
-import com.torugo.lista.ui.CardItens
 import com.torugo.lista.ui.additens.AddItemViewModel
 import com.torugo.lista.ui.additens.AddItemViewModelFactory
 import com.torugo.lista.ui.theme.ListaTheme
@@ -37,68 +22,68 @@ class ItensActivity : ComponentActivity() {
         }
         setContent {
             ListaTheme {
-                ToolBarItens(viewModel)
+//                ToolBarItens(viewModel)
             }
         }
     }
 }
 
-@Composable
-fun ToolBarItens(viewModel: AddItemViewModel) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(text = stringResource(id = R.string.app_name)) },
-                backgroundColor = colorResource(id = R.color.purple_500),
-                contentColor = Color.White
-            )
-        }
-    ) {
-        Column(
-            verticalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier
-                .padding(it)
-        ) {
-            Box(
-                modifier = Modifier
-                    .height(700.dp)
-            ) {
-                ListarItens(viewModel)
-            }
-            Row(
-                modifier = Modifier
-                    .padding(12.dp)
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Column(modifier = Modifier
-                    .fillMaxHeight()
-                    .padding(12.dp),
-                    horizontalAlignment = Alignment.Start,
-//                verticalArrangement = Arrangement.Bottom
-                ) {
-                    Text(text = "TOTAL:", fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
-                    Text(text = "R$:299,00")
-                }
-//                Fab(modifier = Modifier, texto = "Novo Item", botao = Color.Cyan, conteudo = Color.White) {
-
+//@Composable
+//fun ToolBarItens(viewModel: AddItemViewModel) {
+//    Scaffold(
+//        topBar = {
+//            TopAppBar(
+//                title = { Text(text = stringResource(id = R.string.app_name)) },
+//                backgroundColor = colorResource(id = R.color.purple_500),
+//                contentColor = Color.White
+//            )
+//        }
+//    ) {
+//        Column(
+//            verticalArrangement = Arrangement.SpaceBetween,
+//            modifier = Modifier
+//                .padding(it)
+//        ) {
+//            Box(
+//                modifier = Modifier
+//                    .height(500.dp)//acertar esse tamanho
+//            ) {
+//                ListarItens(viewModel)
+//            }
+//            Row(
+//                modifier = Modifier
+//                    .padding(12.dp)
+//                    .fillMaxWidth(),
+//                horizontalArrangement = Arrangement.SpaceBetween
+//            ) {
+//                Column(modifier = Modifier
+//                    .fillMaxHeight()
+//                    .padding(12.dp),
+//                    horizontalAlignment = Alignment.Start,
+////                verticalArrangement = Arrangement.Bottom
+//                ) {
+//                    Text(text = "TOTAL:", fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
+//                    Text(text = "R$:299,00")
 //                }
-            }
-        }
-    }
-}
+////                Fab(modifier = Modifier, texto = "Novo Item", botao = Color.Cyan, conteudo = Color.White) {
+//
+////                }
+//            }
+//        }
+//    }
+//}
 
-@Composable
-fun ListarItens(viewModel: AddItemViewModel) {
-    Column(
-        verticalArrangement = Arrangement.SpaceBetween,
-        modifier = Modifier
-            .padding(8.dp)
-//                        .verticalScroll(ScrollState(1))
-    ) {
-        CardItens(cor = R.color.purple_200, viewModel)
-    }
-}
+//@Composable
+//fun ListarItens(viewModel: AddItemViewModel) {
+//    Column(
+//        verticalArrangement = Arrangement.SpaceBetween,
+//        modifier = Modifier
+//            .padding(8.dp)
+////                        .verticalScroll(ScrollState(1))
+//    ) {
+//        CardItens(cor = R.color.purple_200, viewModel)
+//    }
+//}
 
 //@Preview(showBackground = true)
 //@Composable

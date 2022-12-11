@@ -14,7 +14,7 @@ class AddItemViewModel constructor(
 ) : ViewModel() {
 
     private val _itensData = MutableLiveData<List<Item>>()
-    val ItensData: LiveData<List<Item>>
+    val itensData: LiveData<List<Item>>
         get() = _itensData
 
     fun init(idLista: Long){
