@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lista</string>
+    <string name="title_activity_lista">ListaActivity</string>
+    <string name="title_activity_itens">ItensActivity</string>
+    <string name="botao_positivo">SIM</string>
+    <string name="botao_neutro">-</string>
+    <string name="botao_negativo">NÃO</string>
+    <string name="botao_criar">Nova Lista</string>
+    <string name="botao_deletar">Apagar Selecionadas</string>
+    <string name="botao_novo_item">Novo Item</string>
+</resources>
