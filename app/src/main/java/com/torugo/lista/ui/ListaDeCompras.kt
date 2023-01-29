@@ -1,13 +1,11 @@
 package com.torugo.lista.ui
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -190,26 +188,12 @@ import java.util.*
                 },
                 text = {
                     Column {
-                        BasicTextField(
+                        OutlinedTextField(
                             value = value,
-                            onValueChange = { value = it },
-                            decorationBox = { innerTextField ->
-                                Row(
-                                    Modifier
-                                        .background(
-                                            Color.LightGray,
-                                            RoundedCornerShape(percent = 20)
-                                        )
-                                        .padding(16.dp)
-                                        .fillMaxWidth()
-                                ) {
-
-                                    if (value.text.isEmpty()) {
-                                        Text("Digite o nome da Lista...")
-                                    }
-                                    innerTextField()
-                                }
-                            },
+                            label = { Text(text = "Nome da Lista") },
+                            onValueChange = {
+                                value = it
+                            }
                         )
                     }
                 },

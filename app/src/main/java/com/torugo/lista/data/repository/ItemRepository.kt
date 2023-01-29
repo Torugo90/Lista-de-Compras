@@ -15,4 +15,6 @@ interface ItemRepository {
     suspend fun getAll(idLista: Long): List<Item>
 
     suspend fun deleteAll(idLista: Long)
+
+    suspend fun total(idLista: Long): Double
 }

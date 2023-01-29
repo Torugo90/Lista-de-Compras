@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Lista</string>
+    <string name="item_list">Itens da Lista</string>
     <string name="title_activity_lista">ListaActivity</string>
-    <string name="title_activity_itens">ItensActivity</string>
     <string name="botao_positivo">SIM</string>
     <string name="botao_neutro">-</string>
     <string name="botao_negativo">NÃO</string>

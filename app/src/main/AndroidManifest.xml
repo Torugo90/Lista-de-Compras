@@ -13,12 +13,6 @@
         android:theme="@style/Theme.Lista"
         tools:targetApi="31">
         <activity
-            android:name="com.torugo.lista.ui.activities.ItensActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_itens"
-            android:theme="@style/Theme.Lista" />
-        <activity
             android:name="com.torugo.lista.ui.activities.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"

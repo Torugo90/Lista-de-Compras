@@ -33,4 +33,8 @@ class ItemDbDataSource(
     override suspend fun deleteAll(idLista: Long) {
         return itensDAO.deleteAll(idLista)
     }
+
+    override suspend fun total(idLista: Long): Double {
+        return itensDAO.total(idLista)
+    }
 }

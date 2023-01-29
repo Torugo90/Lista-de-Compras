@@ -49,9 +49,9 @@ class MainActivity : ComponentActivity() {
                             ListaDeCompras(listaViewModel, navController)
                         }
                         composable("argument/{idLista}",
-                            arguments = listOf(navArgument("idLista") {type = NavType.IntType})
+                            arguments = listOf(navArgument("idLista") {type = NavType.LongType})
                             ){
-                            ItensLista(itensViewModel, navController, it.arguments?.getInt("idLista"))
+                            ItensLista(itensViewModel, navController, it.arguments?.getLong("idLista"))
                         }
                     }
                 )

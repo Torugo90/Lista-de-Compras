@@ -23,4 +23,7 @@ interface ItensDAO {
 
     @Query("DELETE FROM itens WHERE idLista = :idLista")
     suspend fun deleteAll(idLista: Long)
+
+    @Query("SELECT SUM(valor) FROM itens where idLista = :idLista")
+    suspend fun total(idLista: Long): Double
 }
